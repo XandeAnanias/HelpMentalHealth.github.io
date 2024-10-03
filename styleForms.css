@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+body{
+    background: url(imagens/Fundo.png);
+    position: center;
+     background-size: cover;
+}
+.formulario{
+    flex-direction: column;
+    align-items: center; 
+    justify-items: center;
+    border-radius: 10px;
+    border: 1px transparent;
+    box-shadow: 0px 0px 10px black;
+    padding: 30px 40px;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    align-content: center;
+    width: 20%;
+    align-self: center;
+    text-align: center;
+}
+.logo{
+    width: 200px;
+    padding: 5px;
+    margin-bottom: -50px;
+    
+}
+.formtitle{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color:#5d7ba7;
+    font-size: 40;
+    margin-bottom: 50px;
+}
+
+.campo{
+    width: 80%;
+    height: 15%;
+    padding: 10px;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: lightgray;
+}
+
+.label{
+    margin-left: -45%;
+    font-family: "Montserrat", sans-serif;
+}
+
+#esquecer{
+    margin-top: -3%;
+    font-size: small;
+}
+
+.entrar{
+    font-family: "Montserrat", sans-serif;
+    width: 30%;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    background-color:#5d7ba7;
+    color: whitesmoke;
+    font-size: medium;
+}
+
+p{
+    font-family: "Montserrat", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+#labelButton{
+    text-decoration: none;
+    color: whitesmoke;
+}
