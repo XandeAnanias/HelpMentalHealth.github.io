@@ -20,6 +20,7 @@
     --text-color: #707070;
     --btn-color: #264466;
     --black-color: #000;
+    --second-color: #ceddec;
     transition: var(--tran-04);
 
     /*============Transition==============*/
@@ -40,6 +41,7 @@ body.dark{
     --text-color: #FFF;
     --btn-color: #264466;
     --black-color: #FFF;
+    --second-color: #ceddec;
     transition: var(--tran-05);
 }
 
@@ -420,6 +422,7 @@ body.dark .menu-bar .mode i.sun{
     margin-left: 40px;
     width: 95%;
     transition: var(--tran-05);
+    cursor: pointer;
 }
 
 .home .chat-info {

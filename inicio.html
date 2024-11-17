@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMH - Inicio</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="styleIndex.css">
+    <!--BoxIcons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/
+    css/boxicons.min.css' rel='stylesheet'>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins
+:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ==========CSS========== -->
+    <style>
+        :root {
+            --body-color: #E4E9F7;
+            --sidebar-color: #FFF;
+            --primary-color: #264466;
+            --primary-color-light: #F6F5FF;
+            --toggle-color: #DDD;
+            --text-color: #707070;
+            --btn-color: #264466;
+            --black-color: #000;
+            --second-color: #ceddec;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 500px;
+
+        }
+
+        .col {
+            display: flex;
+        }
+
+
+        .card {
+            width: 380px;
+            height: 508px;
+            background-image: linear-gradient(163deg, #528add 0%, #3700ff 100%);
+            border-radius: 20px;
+            transition: all .3s;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+
+        .card2 {
+            width: 380px;
+            height: 508px;
+            background-color: whitesmoke; 
+            transition: all .2s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 300px;
+            color: var(--primary-color);
+        }
+
+        .card2:hover {
+            transform: scale(0.98);
+            border-radius: 20px;
+        }
+
+        .card:hover {
+            box-shadow: 0px 0px 30px 1px rgba(35, 156, 226, 0.3);
+        }
+
+        .cardTittle {
+            font-size: 50px;
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <a href="login.html">
+                    <div class="card">
+                        <div class="card2">
+                            <label class="cardTittle">Usuário</label>
+                            <i class='bx bx-user ex'></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="loginPsicologo.html">
+                <div class="card">
+                    <div class="card2">
+                        <label class="cardTittle">Psicólogo</label>
+                        <i class='bx bx-briefcase-alt-2'></i>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+</body>
+
+</html>

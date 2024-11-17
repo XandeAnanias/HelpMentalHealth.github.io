@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HMH - Cadastro de Psicologo</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="styleForms.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:
+    ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="formulario">
+
+        <div>
+            <img src="imagens/Logo.png" id="logo">
+            <label class="semitittle">Cadastro</label>
+        </div>
+
+        <div class="mb">
+            <label for="formGroupExampleInput" class="form-label">Nome:</label>
+            <input type="text" class="form-controler" id="formGroupUsername" placeholder="Digite seu nome completo">
+            <label for="formGroupExampleInput" class="form-label">CPF:</label>
+            <input type="text" class="form-controler" id="formGroupUsername"
+                placeholder="Digite somente os números do seu CPF">
+            <label for="formGroupExampleInput" class="form-label">Email:</label>
+            <input type="text" class="form-controler" id="formGroupEmail" placeholder="Digite seu email">
+            <label for="formGroupExampleInput" class="form-label">Estado: </label>
+            <div class="custom-select">
+                <button
+                  class="select-button"
+                  role="combobox"
+                  aria-label="select button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="select-dropdown"
+                >
+                  <span class="selected-value">Selecione seu Estado</span>
+                  <span class="arrow"></span>
+                </button>
+                <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                    <li role="option">
+                      <input type="radio" id="AC" name="state" />
+                      <label for="AC">Acre</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="AL" name="state" />
+                      <label for="AL">Alagoas</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="AP" name="state" />
+                      <label for="AP">Amapá</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="AM" name="state" />
+                      <label for="AM">Amazonas</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="BA" name="state" />
+                      <label for="BA">Bahia</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="CE" name="state" />
+                      <label for="CE">Ceará</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="DF" name="state" />
+                      <label for="DF">Distrito Federal</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="ES" name="state" />
+                      <label for="ES">Espírito Santo</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="GO" name="state" />
+                      <label for="GO">Goiás</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="MA" name="state" />
+                      <label for="MA">Maranhão</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="MT" name="state" />
+                      <label for="MT">Mato Grosso</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="MS" name="state" />
+                      <label for="MS">Mato Grosso do Sul</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="MG" name="state" />
+                      <label for="MG">Minas Gerais</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="PA" name="state" />
+                      <label for="PA">Pará</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="PB" name="state" />
+                      <label for="PB">Paraíba</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="PR" name="state" />
+                      <label for="PR">Paraná</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="PE" name="state" />
+                      <label for="PE">Pernambuco</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="PI" name="state" />
+                      <label for="PI">Piauí</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="RJ" name="state" />
+                      <label for="RJ">Rio de Janeiro</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="RN" name="state" />
+                      <label for="RN">Rio Grande do Norte</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="RS" name="state" />
+                      <label for="RS">Rio Grande do Sul</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="RO" name="state" />
+                      <label for="RO">Rondônia</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="RR" name="state" />
+                      <label for="RR">Roraima</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="SC" name="state" />
+                      <label for="SC">Santa Catarina</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="SP" name="state" />
+                      <label for="SP">São Paulo</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="SE" name="state" />
+                      <label for="SE">Sergipe</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="TO" name="state" />
+                      <label for="TO">Tocantins</label>
+                    </li>
+                  </ul>
+                  
+              </div>     
+            <label for="formGroupExampleInput" class="form-label">Celular:</label>
+            <input type="text" class="form-controler" id="formGroupUsername" placeholder="Digite seu número de celular">
+        </div>
+        <div class="mb" id="mb-senha">
+            <label for="formGroupExampleInput2" class="form-label">Senha:</label>
+            <div>
+                <input type="password" class="formGroupSenha" id="formGroupSenha" placeholder="Digite sua senha">
+                <img src="imagens/olho-fechado.png" id="eyeicon">
+            </div>
+            <label for="formGroupExampleInput2" class="form-label">Confirme sua senha:</label>
+            <div>
+                <input type="password" class="formGroupSenha" id="formGroupSenha2" placeholder="Repita sua senha">
+                <img src="imagens/olho-fechado.png" id="eyeicon2">
+            </div>
+        </div>
+
+
+        <a href="indexPsicologo.html"><button class="submit">Cadastrar</button></a>
+        <label>Já tem uma conta?<a href="loginPsicologo.html" style="text-decoration: none; color: black;"> Clique aqui para
+                entrar</label></a>
+
+    </div>
+
+    <!--Bootstrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--JS-->
+    <script src="scriptForm.js"></script>
+
+</body>
+
+</html>
