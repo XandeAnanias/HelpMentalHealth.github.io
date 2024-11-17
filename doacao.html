@@ -50,7 +50,7 @@
 
                 <ul class="menu-links">
                     <li class="nav-links">
-                        <a href="doacao.html">
+                        <a href="#">
                             <i class='bx bx-money icon'></i>
                             <span class="text nav-text">Doações</span>
                         </a>
@@ -107,70 +107,22 @@
 
     <!-- ======================================HOME====================================== -->
 
-    <section class="home"><div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div>
-        <div class="text" id="resp">Respostas</div>
+    <section class="home">
 
-        <div class="container" class="hidden">
-            <div id="terminal">
-                <i class='bx bx-arrow-back icon' id="back"></i>
-                <label>Pelo que voçê está passando?</label>
-                <textarea name="text" class="send" placeholder="Escreva Aqui"></textarea>
-                <button id="sent">Enviar</button>
-            </div>
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; ">
+
+        <div class="text" style="margin: 20px 0px 40px 0px;">Doações</div>
+
+        <img src="imagens/Logo.png" style="width: 250px; margin: 20px 0px 40px 0px;">
+        <div class="text" style="font-size: 20px;">Nos Ajude a nos mantermos, assim continuamos fazendo o bem para as pessoas.</div>
+        <div class="text" style="font-size: 20px;">Faça uma doação agora mesmo!</div>
+
+        <div class="text" style="margin-top: 40px;">Pix: 000000000</div>
+
+        <button style="margin-top: 60px; background-color: var(--btn-color); border: none; border-radius: 8px; color: white; padding: 10px 20px 10px 20px; cursor: pointer; font-size: 20px;">Ajudar</button>
+    
+
         </div>
-
-
-        <!-- ======================================Containers MSG====================================== -->
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-        <!-- ======================================Fim Containers MSG====================================== -->
-
-        <!-- ======================================BTN MSG====================================== -->
-
-        <div class="btnmsg"><button id="msg"><i class='bx bx-comment-add'></i></button></div>
-
-        <!-- ======================================FIM BTN MSG====================================== -->
 
 
     </section>
@@ -179,44 +131,7 @@
         
     <!--js-->   
         <script src="script.js"></script>
-        <script>
-             let btnmsg = document.getElementById("msg");
-             let container = document.querySelector(".container");
-             let chat = document.querySelectorAll(".chat-item");
-             let divbtn = document.querySelector(".btnmsg");
-             let resp = document.getElementById("resp");
-             let search = document.querySelector(".search-box");
-             let sent = document.getElementById("sent");
-             let back = document.getElementById("back");
-
-             btnmsg.addEventListener("click", () => {
-            container.style.display = "flex"; 
-            chat.forEach((chat) => {
-                chat.style.display = "none";
-            });
-
-            divbtn.style.display = "none";
-            resp.style.display = "none";
-            search.style.display = "none";
-            });
-
-            back.addEventListener("click", () => {
-            container.style.display = "none"; 
-            chat.forEach((chat) => {
-                chat.style.display = "flex";
-            });
-
-            divbtn.style.display = "flex";
-            resp.style.display = "flex";
-            search.style.display = "flex";
-            });
-
-
-            sent.onclick = function(){
-                alert("Mensagem enviada com sucesso");;
-            }
-
-        </script>
+        
 </body>
 
 </html>

@@ -1,13 +1,22 @@
 @charset "UTF-8";
-
-body{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+body {
     background: url(imagens/Fundo.png);
     position: center;
-     background-size: cover;
+    background-size: cover;
 }
-.formulario{
+
+label {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.formulario {
+    background: whitesmoke;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-items: center;
     border-radius: 10px;
     border: 1px transparent;
@@ -18,69 +27,109 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    background: transparent;
     backdrop-filter: blur(10px);
     align-content: center;
-    width: 20%;
+    width: 30vw;
     align-self: center;
     text-align: center;
 }
-.logo{
-    width: 200px;
-    padding: 5px;
-    margin-bottom: -50px;
-    
-}
-.formtitle{
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    color:#5d7ba7;
-    font-size: 40;
-    margin-bottom: 50px;
+
+.formulario div {
+    display: flex;
+    flex-direction: column;
 }
 
-.campo{
-    width: 80%;
-    height: 15%;
-    padding: 10px;
-    margin-bottom: 5%;
-    border-radius: 8px;
-    margin-top: 10px;
-    background-color: lightgray;
+.semitittle {
+    font-size: 50px;
+    margin: 2px;
+    color: #264466;
 }
 
-.label{
-    margin-left: -45%;
-    font-family: "Montserrat", sans-serif;
-}
-
-#esquecer{
-    margin-top: -3%;
-    font-size: small;
-}
-
-.entrar{
-    font-family: "Montserrat", sans-serif;
+#logo {
     width: 30%;
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    background-color:#5d7ba7;
-    color: whitesmoke;
-    font-size: medium;
+    align-self: center;
+    padding-bottom: -10px;
 }
 
-p{
+
+.form-label {
+    text-align: start;
+    display: grid;
     font-family: "Montserrat", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 2px;
 }
 
-a{
-    text-decoration: none;
-    color:black;
+.form-controler {
+    width: 100%;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0%;
+    background-color: transparent;
+    outline: none;
 }
 
-#labelButton{
-    text-decoration: none;
-    color: whitesmoke;
+#formGroupSenha {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.formGroupSenha {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+#mb-senha{
+    margin-bottom: 3em;
+}
+
+#mb-senha img {
+    width: 2em;
+    cursor: pointer;
+}
+
+#mb-senha div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    background-color: #264466;
+    border: none;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 3.75em;
+    min-width: 0;
+    padding: 1em 2.3em;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    margin-bottom: 1em;
+}
+
+.submit:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+#rodape{
+    display: block;
 }

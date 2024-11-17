@@ -59,7 +59,7 @@
 
                 <ul class="menu-links">
                     <li class="nav-links">
-                        <a href="about.html">
+                        <a href="#">
                             <i class='bx bx-info-square icon'></i>
                             <span class="text nav-text">Sobre nós</span>
                         </a>
@@ -107,70 +107,43 @@
 
     <!-- ======================================HOME====================================== -->
 
-    <section class="home"><div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div>
-        <div class="text" id="resp">Respostas</div>
+    <section class="home">
 
-        <div class="container" class="hidden">
-            <div id="terminal">
-                <i class='bx bx-arrow-back icon' id="back"></i>
-                <label>Pelo que voçê está passando?</label>
-                <textarea name="text" class="send" placeholder="Escreva Aqui"></textarea>
-                <button id="sent">Enviar</button>
-            </div>
+        <div class="container" style="display: grid; height: 10%">
+            <div class="text" style="width: 115%; color: var(--text-color); padding-top: 30px;">
+            Sobre Nós</div>
         </div>
+        <div class="container" style="display: grid; flex-direction: column; align-items: center; background-color: var(--body-color); height: 70%;">
 
+            <div style="display: flex; flex-direction: row; background-color: var(--body-color); align-items: center; align-self: center; align-self: center; transition: var(--tran-05);">
+                <div style="display: flex; flex-direction: column; align-items: center; align-self: center; align-self: center;">
+                    <img src="imagens/Xande.png" style="width: 200px; border-radius: 100px; margin-right: 50px;">
+                    <label style="font-size: 20px; margin-right: 40px;">Alexandre Ananias</label>
+                </div>
 
-        <!-- ======================================Containers MSG====================================== -->
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
+                <div style="display: flex; flex-direction: column; align-items: center; align-self: center; align-self: center;">
+                    <img src="imagens/Ana.png" style="width: 200px; border-radius: 100px; margin-right: 50px;">
+                    <label style="font-size: 20px; margin-right: 40px;">Ana Beatriz Menezes</label>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; align-self: center; align-self: center;">
+                    <img src="imagens/Cat.png" style="width: 200px; border-radius: 100px; margin-right: 50px;">
+                    <label style="font-size: 20px; margin-right: 40px;">Catarine Tenório</label>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; align-self: center; align-self: center;">
+                    <img src="imagens/Daniel.png" style="width: 200px; border-radius: 100px;">
+                    <label style="font-size: 20px;">Daniel Bernardo</label>
                 </div>
             </div>
-            <div class="time">11:45</div>
+
         </div>
 
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
+        <div class="text" style="height: 20%; text-align: center; width: 115%; color: var(--text-color); font-size: 20px;">
+            Somos um grupo de estudantes do Colégio Técnico de Limeira.<br>
+             Buscamos solucionar um problema observado: 
+            A alta demanda pelo cuidado com a Saúde Mental</div>
 
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-        <!-- ======================================Fim Containers MSG====================================== -->
-
-        <!-- ======================================BTN MSG====================================== -->
-
-        <div class="btnmsg"><button id="msg"><i class='bx bx-comment-add'></i></button></div>
-
-        <!-- ======================================FIM BTN MSG====================================== -->
 
 
     </section>
@@ -179,44 +152,7 @@
         
     <!--js-->   
         <script src="script.js"></script>
-        <script>
-             let btnmsg = document.getElementById("msg");
-             let container = document.querySelector(".container");
-             let chat = document.querySelectorAll(".chat-item");
-             let divbtn = document.querySelector(".btnmsg");
-             let resp = document.getElementById("resp");
-             let search = document.querySelector(".search-box");
-             let sent = document.getElementById("sent");
-             let back = document.getElementById("back");
-
-             btnmsg.addEventListener("click", () => {
-            container.style.display = "flex"; 
-            chat.forEach((chat) => {
-                chat.style.display = "none";
-            });
-
-            divbtn.style.display = "none";
-            resp.style.display = "none";
-            search.style.display = "none";
-            });
-
-            back.addEventListener("click", () => {
-            container.style.display = "none"; 
-            chat.forEach((chat) => {
-                chat.style.display = "flex";
-            });
-
-            divbtn.style.display = "flex";
-            resp.style.display = "flex";
-            search.style.display = "flex";
-            });
-
-
-            sent.onclick = function(){
-                alert("Mensagem enviada com sucesso");;
-            }
-
-        </script>
+        
 </body>
 
 </html>
