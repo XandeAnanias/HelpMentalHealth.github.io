@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicólogos</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="styleIndex.css">
+    <!--BoxIcons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/
+    css/boxicons.min.css' rel='stylesheet'>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins
+:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======================================SIDEBAR====================================== -->
+
+    <div>
+    <nav class="sidebar close">
+        <header>
+            <div class="logo-details">
+                <span class="image">
+                    <img src="imagens/Logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="tittle">Help Mental Health</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="index.html">
+                            <i class='bx bx-message-rounded-dots icon'></i>
+                            <span class="text nav-text">Respostas</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="doacao.html">
+                            <i class='bx bx-money icon'></i>
+                            <span class="text nav-text">Doações</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="about.html">
+                            <i class='bx bx-info-square icon'></i>
+                            <span class="text nav-text">Sobre nós</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+
+                <ul class="bottom-links">
+                    <li class="mode">
+                        <a href="#">
+                            <i class='bx bx-moon moon' id="moon" style="cursor: auto;"></i>
+                            <i class='bx bx-sun sun' id="sun" style="cursor: auto;"></i>
+                            <span class="mode-text text" style="cursor: auto;">Claro</span>
+                        </a>
+                        <input type="checkbox" id="checkboxInput">
+                        <label for="checkboxInput" class="toggleSwitch close"></label>
+                    </li>
+                </ul>
+
+                <ul class="bottom-links">
+                    <li class="nav-links">
+                        <a href="login.html">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================FIM DA SIDEBAR====================================== -->
+
+    <!-- ======================================HOME====================================== -->
+
+    <section class="home"><div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div>
+        <div class="text" id="resp">Respostas</div>
+
+        <div class="container" class="hidden">
+            <div id="terminal">
+                <i class='bx bx-arrow-back icon' id="back"></i>
+                <label>Pelo que voçê está passando?</label>
+                <textarea name="text" class="send" placeholder="Escreva Aqui"></textarea>
+                <button id="sent">Enviar</button>
+            </div>
+        </div>
+
+
+        <!-- ======================================Containers MSG====================================== -->
+        <div class="chat-item">
+            <div class="chat-info">
+                <div class="avatar"></div>
+                <div class="chat-details">
+                    <p class="name">Psicólogo(a)</p>
+                    <p class="message">Mensagem do(a) psicólogo(a)</p>
+                </div>
+            </div>
+            <div class="time">11:45</div>
+        </div>
+
+        <div class="chat-item">
+            <div class="chat-info">
+                <div class="avatar"></div>
+                <div class="chat-details">
+                    <p class="name">Psicólogo(a)</p>
+                    <p class="message">Mensagem do(a) psicólogo(a)</p>
+                </div>
+            </div>
+            <div class="time">11:45</div>
+        </div>
+
+        <div class="chat-item">
+            <div class="chat-info">
+                <div class="avatar"></div>
+                <div class="chat-details">
+                    <p class="name">Psicólogo(a)</p>
+                    <p class="message">Mensagem do(a) psicólogo(a)</p>
+                </div>
+            </div>
+            <div class="time">11:45</div>
+        </div>
+
+        <div class="chat-item">
+            <div class="chat-info">
+                <div class="avatar"></div>
+                <div class="chat-details">
+                    <p class="name">Psicólogo(a)</p>
+                    <p class="message">Mensagem do(a) psicólogo(a)</p>
+                </div>
+            </div>
+            <div class="time">11:45</div>
+        </div>
+        <!-- ======================================Fim Containers MSG====================================== -->
+
+        <!-- ======================================BTN MSG====================================== -->
+
+        <div class="btnmsg"><button id="msg"><i class='bx bx-comment-add'></i></button></div>
+
+        <!-- ======================================FIM BTN MSG====================================== -->
+
+
+    </section>
+
+    <!-- ======================================FIM DO HOME====================================== -->
+        
+    <!--js-->   
+        <script src="script.js"></script>
+        <script>
+             let btnmsg = document.getElementById("msg");
+             let container = document.querySelector(".container");
+             let chat = document.querySelectorAll(".chat-item");
+             let divbtn = document.querySelector(".btnmsg");
+             let resp = document.getElementById("resp");
+             let search = document.querySelector(".search-box");
+             let sent = document.getElementById("sent");
+             let back = document.getElementById("back");
+
+             btnmsg.addEventListener("click", () => {
+            container.style.display = "flex"; 
+            chat.forEach((chat) => {
+                chat.style.display = "none";
+            });
+
+            divbtn.style.display = "none";
+            resp.style.display = "none";
+            search.style.display = "none";
+            });
+
+            back.addEventListener("click", () => {
+            container.style.display = "none"; 
+            chat.forEach((chat) => {
+                chat.style.display = "flex";
+            });
+
+            divbtn.style.display = "flex";
+            resp.style.display = "flex";
+            search.style.display = "flex";
+            });
+
+
+            sent.onclick = function(){
+                alert("Mensagem enviada com sucesso");;
+            }
+
+        </script>
+</body>
+
+</html>

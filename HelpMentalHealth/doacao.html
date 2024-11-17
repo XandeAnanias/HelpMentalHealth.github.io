@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicólogos</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="styleIndex.css">
+    <!--BoxIcons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/
+    css/boxicons.min.css' rel='stylesheet'>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins
+:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======================================SIDEBAR====================================== -->
+
+    <div>
+    <nav class="sidebar close">
+        <header>
+            <div class="logo-details">
+                <span class="image">
+                    <img src="imagens/Logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="tittle">Help Mental Health</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="index.html">
+                            <i class='bx bx-message-rounded-dots icon'></i>
+                            <span class="text nav-text">Respostas</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class='bx bx-money icon'></i>
+                            <span class="text nav-text">Doações</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="about.html">
+                            <i class='bx bx-info-square icon'></i>
+                            <span class="text nav-text">Sobre nós</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+
+                <ul class="bottom-links">
+                    <li class="mode">
+                        <a href="#">
+                            <i class='bx bx-moon moon' id="moon" style="cursor: auto;"></i>
+                            <i class='bx bx-sun sun' id="sun" style="cursor: auto;"></i>
+                            <span class="mode-text text" style="cursor: auto;">Claro</span>
+                        </a>
+                        <input type="checkbox" id="checkboxInput">
+                        <label for="checkboxInput" class="toggleSwitch close"></label>
+                    </li>
+                </ul>
+
+                <ul class="bottom-links">
+                    <li class="nav-links">
+                        <a href="login.html">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================FIM DA SIDEBAR====================================== -->
+
+    <!-- ======================================HOME====================================== -->
+
+    <section class="home">
+
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; ">
+
+        <div class="text" style="margin: 20px 0px 40px 0px;">Doações</div>
+
+        <img src="imagens/Logo.png" style="width: 250px; margin: 20px 0px 40px 0px;">
+        <div class="text" style="font-size: 20px;">Nos Ajude a nos mantermos, assim continuamos fazendo o bem para as pessoas.</div>
+        <div class="text" style="font-size: 20px;">Faça uma doação agora mesmo!</div>
+
+        <div class="text" style="margin-top: 40px;">Pix: 000000000</div>
+
+        <button style="margin-top: 60px; background-color: var(--btn-color); border: none; border-radius: 8px; color: white; padding: 10px 20px 10px 20px; cursor: pointer; font-size: 20px;">Ajudar</button>
+    
+
+        </div>
+
+
+    </section>
+
+    <!-- ======================================FIM DO HOME====================================== -->
+        
+    <!--js-->   
+        <script src="script.js"></script>
+        
+</body>
+
+</html>
