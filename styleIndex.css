@@ -491,3 +491,114 @@ body.dark .menu-bar .mode i.sun{
     }
 }
 
+
+@media only screen and (max-width: 1290px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar .text {
+        display: none;
+    }
+
+    .sidebar .icon {
+        font-size: 25px;
+    }
+
+    .home {
+        left: 80px;
+        width: calc(100% - 80px);
+        padding: 10px;
+    }
+
+    .home .search-box {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .chat-item {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 14px;
+    }
+
+    .home .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .home .btnmsg {
+        margin-left: 85%;
+        width: 50px;
+        height: 40px;
+    }
+
+    .home #msg {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .sidebar.close ~ .home {
+        .btnmsg {
+            margin-left: 85%;
+        }}
+
+    .send {
+        width: 100%;
+        height: 150px;
+        font-size: 16px;
+    }
+
+    .container{
+        width: calc(100% - 60px);
+    }
+
+    #terminal{
+        width: 200%;
+        margin-left: 40%;
+    }
+
+    label{
+        font-size: 45px;
+    }
+
+    .send {
+        height: 250px;
+        font-size: 14px;
+    }
+
+}
+
+/* Ajustes para dispositivos ainda menores (ex.: largura menor que 600px) */
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 60px;
+        height: 100vh;
+    }
+
+    .sidebar header .toggle{
+        display: none;
+    }
+
+    .home {
+        left: 80px;
+        width: calc(100% - 120px);
+    }
+
+    .chat-item {
+        width: 4px;
+        margin-left: 2.5%;
+        font-size: 10px;
+    }
+
+    .home .avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .loading-bar-background {
+        width: 100%;
+    }
+
+}
+
