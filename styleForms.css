@@ -102,6 +102,10 @@ label a{
     outline: none;
 }
 
+.mb{
+  width: 100%;
+}
+
 #mb-senha{
     margin-bottom: 3em;
 }
@@ -163,7 +167,7 @@ label a{
   }
   
   .select-button {
-    width: 110%;
+    width: 100%;
     font-size: 1.15rem;
     background-color: #fff;
     padding: 8px;
@@ -273,24 +277,13 @@ label a{
 
 @media only screen and (max-width: 1290px) {
   .formulario {
-      width: 80%;
-      max-width: 100%;
-      margin: auto;
-      padding: 30px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 50%;
   }
 
-  #logo {
-      display: block;
-      margin: 0 auto 20px auto;
-      width: 80px;
-      height: auto;
-  }
+  
 
   .semitittle {
-      font-size: 1.8rem;
+      font-size: 40px;
       text-align: center;
       display: block;
       margin-bottom: 20px;
@@ -340,13 +333,14 @@ label a{
 }
 
 /* Ajuste para telas menores ainda (ex.: modo paisagem no iPhone) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 710px) {
   .formulario {
+    width: 80%;
       padding: 20px;
   }
 
   .semitittle {
-    font-size: 1.8rem;
+    font-size: 35px;
   }
 
   .submit {

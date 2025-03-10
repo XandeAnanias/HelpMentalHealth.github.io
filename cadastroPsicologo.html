@@ -11,95 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:
     ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <style>
-        @media only screen and (max-width: 1290px) {
-    .formulario {
-        width: 80%;
-        max-width: 100%;
-        margin: auto;
-        padding: 30px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    #logo {
-        display: block;
-        margin: 0 auto 20px auto;
-        width: 180px;
-        height: auto;
-    }
-
-    .semitittle {
-        font-size: 3.7rem;
-        text-align: center;
-        
-        margin-bottom: 20px;
-    }
-
-    .mb {
-        margin-bottom: 15px;
-    }
-
-    .form-label {
-        font-size: 2rem;
-    }
-
-    .form-controler {
-      flex-direction: row;
-      width: 100%;
-      border-width: 0px 0px 2px 0px;
-      border-style: solid;
-      font-size: 2em;
-    }
-
-    #mb-senha div {
-        display: flex;
-        align-items: center;
-        font-size: 2em;
-    }
-
-    .selected-value {
-      text-align: left;
-      font-size: 1.6em;
-  }
-
-    #rodape {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .submit {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-        border: none;
-        color: white;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 2em;
-    }
-
-    label {
-        font-size: 2em;
-    }
-
-    #rodape a {
-        text-decoration: none;
-    }
-}
-
-/* Ajuste para telas menores ainda (ex.: modo paisagem no iPhone) */
-@media only screen and (max-width: 600px) {
-    .formulario {
-        padding: 15px;
-    }
-
-    .submit {
-        font-size: 0.9rem;
-    }
-}
-    </style>
+    
 </head>
 
 <body>
@@ -119,7 +31,7 @@
                 placeholder="Digite somente os números do seu CPF">
             <label for="formGroupExampleInput" class="form-label">Email:</label>
             <input type="text" class="form-controler" id="formGroupEmail" placeholder="Digite seu email">
-            <label for="formGroupExampleInput" class="form-label">Estado: </label>
+            <label for="formGroupExampleInput" class="form-label">Região: </label>
             <div class="custom-select">
                 <button
                   class="select-button"
@@ -129,123 +41,123 @@
                   aria-expanded="false"
                   aria-controls="select-dropdown"
                 >
-                  <span class="selected-value">Selecione seu Estado</span>
+                  <span class="selected-value">Selecione sua Região</span>
                   <span class="arrow"></span>
                 </button>
                 <ul class="select-dropdown" role="listbox" id="select-dropdown">
                     <li role="option">
                       <input type="radio" id="AC" name="state" />
-                      <label for="AC">Acre</label>
+                      <label for="AC">AC</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="AL" name="state" />
-                      <label for="AL">Alagoas</label>
+                      <label for="AL">AL</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="AP" name="state" />
-                      <label for="AP">Amapá</label>
+                      <label for="AP">AP</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="AM" name="state" />
-                      <label for="AM">Amazonas</label>
+                      <label for="AM">AM</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="BA" name="state" />
-                      <label for="BA">Bahia</label>
+                      <label for="BA">BA</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="CE" name="state" />
-                      <label for="CE">Ceará</label>
+                      <label for="CE">CE</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="DF" name="state" />
-                      <label for="DF">Distrito Federal</label>
+                      <label for="DF">DF</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="ES" name="state" />
-                      <label for="ES">Espírito Santo</label>
+                      <label for="ES">ES</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="GO" name="state" />
-                      <label for="GO">Goiás</label>
+                      <label for="GO">GO</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="MA" name="state" />
-                      <label for="MA">Maranhão</label>
+                      <label for="MA">MA</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="MT" name="state" />
-                      <label for="MT">Mato Grosso</label>
+                      <label for="MT">MT</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="MS" name="state" />
-                      <label for="MS">Mato Grosso do Sul</label>
+                      <label for="MS">MS</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="MG" name="state" />
-                      <label for="MG">Minas Gerais</label>
+                      <label for="MG">MG</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="PA" name="state" />
-                      <label for="PA">Pará</label>
+                      <label for="PA">PA</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="PB" name="state" />
-                      <label for="PB">Paraíba</label>
+                      <label for="PB">PB</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="PR" name="state" />
-                      <label for="PR">Paraná</label>
+                      <label for="PR">PR</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="PE" name="state" />
-                      <label for="PE">Pernambuco</label>
+                      <label for="PE">PE</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="PI" name="state" />
-                      <label for="PI">Piauí</label>
+                      <label for="PI">PI</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="RJ" name="state" />
-                      <label for="RJ">Rio de Janeiro</label>
+                      <label for="RJ">RJ</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="RN" name="state" />
-                      <label for="RN">Rio Grande do Norte</label>
+                      <label for="RN">RN</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="RS" name="state" />
-                      <label for="RS">Rio Grande do Sul</label>
+                      <label for="RS">RS</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="RO" name="state" />
-                      <label for="RO">Rondônia</label>
+                      <label for="RO">RO</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="RR" name="state" />
-                      <label for="RR">Roraima</label>
+                      <label for="RR">RR</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="SC" name="state" />
-                      <label for="SC">Santa Catarina</label>
+                      <label for="SC">SC</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="SP" name="state" />
-                      <label for="SP">São Paulo</label>
+                      <label for="SP">SP</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="SE" name="state" />
-                      <label for="SE">Sergipe</label>
+                      <label for="SE">SE</label>
                     </li>
                     <li role="option">
                       <input type="radio" id="TO" name="state" />
-                      <label for="TO">Tocantins</label>
+                      <label for="TO">TO</label>
                     </li>
                   </ul>
                   
               </div>     
-            <label for="formGroupExampleInput" class="form-label">Celular:</label>
-            <input type="text" class="form-controler" id="formGroupUsername" placeholder="Digite seu número de celular">
+            <label for="formGroupExampleInput" class="form-label">Cidade:</label>
+            <input type="text" class="form-controler" id="formGroupUsername" placeholder="Digite o nome da sua cidade">
         </div>
         <div class="mb" id="mb-senha">
             <label for="formGroupExampleInput2" class="form-label">Senha:</label>
