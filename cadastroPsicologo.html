@@ -11,7 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:
     ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    
+    <style>
+      .formulario {
+    width: 40%;
+    height: 90%;
+}
+
+    @media only screen and (max-width: 1290px) {
+  .formulario {
+      width: 70%;
+  }
+}
+
+    @media only screen and (max-width: 710px) {
+  .formulario {
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+  }
+}
+    </style>
+
 </head>
 
 <body>
@@ -28,7 +48,7 @@
             <input type="text" class="form-controler" id="formGroupUsername" placeholder="Digite seu nome completo">
             <label for="formGroupExampleInput" class="form-label">CPF:</label>
             <input type="text" class="form-controler" id="formGroupUsername"
-                placeholder="Digite somente os números do seu CPF">
+                placeholder="Digite os números do seu CPF">
             <label for="formGroupExampleInput" class="form-label">Email:</label>
             <input type="text" class="form-controler" id="formGroupEmail" placeholder="Digite seu email">
             <label for="formGroupExampleInput" class="form-label">Região: </label>
@@ -173,7 +193,7 @@
         </div>
 
 
-        <a href="indexPsicologo.html"><button class="submit">Cadastrar</button></a>
+        <a href="indexPsicologo.html"><button class="submit">Cadastrar</button></a><br>
         <label>Já tem uma conta?<a href="loginPsicologo.html"> Clique aqui para
                 entrar</label></a>
 

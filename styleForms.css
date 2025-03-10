@@ -29,6 +29,8 @@ label {
 label a{
   text-decoration: underline;
    color: var(--black-color);
+   display: flex;
+   justify-content: center;
 }
 
 .formulario {
@@ -47,7 +49,7 @@ label a{
     position: absolute;
     backdrop-filter: blur(10px);
     align-content: center;
-    width: 30vw;
+    width: 40vw;
     align-self: center;
     text-align: center;
 }
@@ -64,7 +66,7 @@ label a{
 }
 
 #logo {
-    width: 30%;
+    width: 20%;
     align-self: center;
     padding-bottom: -10px;
 }
@@ -76,6 +78,7 @@ label a{
     font-family: "Montserrat", sans-serif;
     margin-top: 5px;
     margin-bottom: 2px;
+    height: 15px;
 }
 
 .form-controler {
@@ -107,7 +110,7 @@ label a{
 }
 
 #mb-senha{
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
 }
 
 #mb-senha img {
@@ -131,7 +134,7 @@ label a{
 .submit {
     background-color: #264466;
     border: none;
-    border-radius: 0.9375em;
+    border-radius: 15px;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
@@ -160,10 +163,10 @@ label a{
 
 .custom-select {
     position: relative;
-    width: 400px;
     max-width: 100%;
     font-size: 1.15rem;
     color: #000;
+    margin-top: 3px;
   }
   
   .select-button {
@@ -277,10 +280,8 @@ label a{
 
 @media only screen and (max-width: 1290px) {
   .formulario {
-      width: 50%;
+      width: 70%;
   }
-
-  
 
   .semitittle {
       font-size: 40px;
@@ -307,8 +308,12 @@ label a{
   }
 
   #mb-senha div {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
+  }
+
+  #mb-senha{
+    margin-bottom: 2em;
   }
 
 
@@ -318,12 +323,13 @@ label a{
   }
 
   .submit {
-      width: 100%;
+      width: 50%;
       padding: 10px;
       font-size: 1rem;
       border: none;
-      border-radius: 10px;
+      border-radius: 15px;
       cursor: pointer;
+
   }
 
   #rodape label {
@@ -336,14 +342,29 @@ label a{
 @media only screen and (max-width: 710px) {
   .formulario {
     width: 80%;
-      padding: 20px;
+    padding: 20px;
   }
 
+  .form-label {
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+}
+
   .semitittle {
-    font-size: 35px;
+    font-size: 25px;
+    margin-bottom: 0px;
   }
 
   .submit {
       font-size: 0.9rem;
+      margin-bottom: 0.5em;
+  }
+
+  #mb-senha {
+    margin-bottom: 1em;
+}
+
+  label{
+    margin-top: 5px;
   }
 }
