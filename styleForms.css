@@ -279,6 +279,7 @@ label a{
 /* ==========Responsividade========== */
 
 @media only screen and (max-width: 1290px) {
+  
   .formulario {
       width: 70%;
   }
@@ -323,7 +324,6 @@ label a{
   }
 
   .submit {
-      width: 50%;
       padding: 10px;
       font-size: 1rem;
       border: none;
