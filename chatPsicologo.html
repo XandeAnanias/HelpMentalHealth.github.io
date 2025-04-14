@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat com Usuário</title>
+    <link rel="stylesheet" href="styleChat.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="chat-head">
+        <span><a href="indexPsicologo.html"><i class='bx bx-left-arrow-alt'></i></a></span>
+        <span>Usuário</span>
+        <span onclick="report()" style="cursor:pointer"><i class='bx bx-comment-x'></i></span>
+    </div>
+
+        <div class="chat-container" id="chatContainer">
+
+            <div class="msg">Mensagem do Usuário</div>
+            <!-- Mensagens serão inseridas aqui dinamicamente -->
+        </div>
+    
+    <div class="chat-foot">
+        <div class="chat-foot">
+            <textarea placeholder="Digite uma mensagem..." id="messageInput"></textarea>
+            <button id="sendButton">
+                <i class='bx bx-send'></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="scriptChat.js"></script>
+</body>
+</html>

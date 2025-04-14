@@ -92,7 +92,7 @@
 
                 <ul class="bottom-links">
                     <li class="nav-links">
-                        <a href="loading.html">
+                        <a href="inicio.html">
                             <i class='bx bx-log-out icon'></i>
                             <span class="text nav-text">Sair</span>
                         </a>
@@ -107,7 +107,8 @@
 
     <!-- ======================================HOME====================================== -->
 
-    <section class="home"><div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div>
+    <section class="home">
+        <!-- <div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div> -->
         <div class="text" id="resp">Respostas</div>
 
         <div class="container" class="hidden">
@@ -180,7 +181,16 @@
     <!--js-->   
         <script src="script.js"></script>
         <script>
-             let btnmsg = document.getElementById("msg");
+            function trocarPagina() {
+                window.location.href = "chatUsuario.html";
+            }
+        
+            // Usando querySelectorAll + forEach
+            document.querySelectorAll(".chat-item").forEach(item => {
+                item.addEventListener("click", trocarPagina);
+            });
+
+            let btnmsg = document.getElementById("msg");
              let container = document.querySelector(".container");
              let chat = document.querySelectorAll(".chat-item");
              let divbtn = document.querySelector(".btnmsg");

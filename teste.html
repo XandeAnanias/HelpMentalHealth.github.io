@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Real</title>
+    <link rel="stylesheet" href="styleChat.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* [Mantenha todo o CSS anterior que você já tem] */
+
+.chat-container {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    position: relative;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.other-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* [Mantenha o restante do seu CSS existente] */
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="indexPsicologo.html"><i class='bx bx-left-arrow-alt'></i></a>
+        <span>Usuário</span>
+        <i class='bx bx-message-alt-x'></i>
+    </div>
+    
+    <div class="chat-container" id="chatContainer">
+        <!-- Mensagens serão inseridas aqui dinamicamente -->
+    </div>
+    
+    <div class="chat-foot">
+        <textarea id="messageInput" placeholder="Digite sua mensagem..."></textarea>
+        <button id="sendButton">
+            <i class='bx bx-send'></i>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const chatContainer = document.getElementById('chatContainer');
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+    
+    // Função para enviar mensagem
+    function sendMessage() {
+        const messageText = messageInput.value.trim();
+        
+        if (messageText !== '') {
+            // Criar nova mensagem
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message user-message';
+            messageDiv.textContent = messageText;
+            
+            // Adicionar ao chat
+            chatContainer.appendChild(messageDiv);
+            
+            // Limpar input e manter o foco
+            messageInput.value = '';
+            messageInput.focus();
+            
+            // Rolagem automática
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            
+            // Simular resposta (opcional)
+            setTimeout(simulateReply, 1000);
+        }
+    }
+    
+    // Event Listeners
+    sendButton.addEventListener('click', sendMessage);
+    
+    // Focar no input quando a página carregar
+    messageInput.focus();
+});
+    </script>
+</body>
+</html>

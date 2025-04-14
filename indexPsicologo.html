@@ -92,7 +92,7 @@
 
                 <ul class="bottom-links">
                     <li class="nav-links">
-                        <a href="loading.html">
+                        <a href="inicio.html">
                             <i class='bx bx-log-out icon'></i>
                             <span class="text nav-text">Sair</span>
                         </a>
@@ -107,17 +107,18 @@
 
     <!-- ======================================HOME====================================== -->
 
-    <section class="home"><div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div>
+    <section class="home">
+        <!-- <div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div> -->
         <div class="text" id="resp">Responder</div>
 
-        <div class="container" class="hidden">
+        <!-- <div class="container" class="hidden">
             <div id="terminal">
                 <i class='bx bx-arrow-back icon' id="back"></i>
                 <label>Escreva algo para ajudá-lo</label>
                 <textarea name="text" class="send" placeholder="Escreva aqui"></textarea>
                 <button id="sent">Enviar</button>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- ======================================Containers MSG====================================== -->
@@ -174,41 +175,14 @@
     <!--js-->   
         <script src="script.js"></script>
         <script>
-            let container = document.querySelector(".container");
-            let chatItems = document.querySelectorAll(".chat-item");  // Corrigido para todos os chats
-            let resp = document.getElementById("resp");
-            let search = document.querySelector(".search-box");
-            let sent = document.getElementById("sent");
-            let back = document.getElementById("back");
+            function trocarPagina() {
+                window.location.href = "chatPsicologo.html";
+            }
         
-            // Adiciona evento de click para cada item de chat
-            chatItems.forEach((chat) => {
-                chat.addEventListener("click", () => {
-                    container.style.display = "flex";  // Exibe o container
-                    chatItems.forEach((item) => {
-                        item.style.display = "none";  // Oculta todos os itens de chat
-                    });
-                    resp.style.display = "none";  // Oculta a resposta
-                    search.style.display = "none";  // Oculta a caixa de busca
-                });
+            // Usando querySelectorAll + forEach
+            document.querySelectorAll(".chat-item").forEach(item => {
+                item.addEventListener("click", trocarPagina);
             });
-        
-            // Evento para voltar para a lista de chats
-            back.addEventListener("click", () => {
-                container.style.display = "none";  // Oculta o container
-                chatItems.forEach((item) => {
-                    item.style.display = "flex";  // Exibe todos os itens de chat
-                });
-                resp.style.display = "flex";  // Exibe a resposta
-                search.style.display = "flex";  // Exibe a caixa de busca
-            });
-        
-            // Alerta quando a mensagem for enviada
-            sent.onclick = function() {
-                alert("Mensagem enviada com sucesso");
-            };
-        </script>
-
         </script>
 </body>
 
