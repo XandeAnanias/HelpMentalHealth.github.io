@@ -1,232 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicólogos</title>
-    <!--CSS-->
-    <link rel="stylesheet" href="styleIndex.css">
-    <!--BoxIcons-->
-    <link href='https://unpkg.com/boxicons@2.1.4/
-    css/boxicons.min.css' rel='stylesheet'>
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins
-:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Help Mental Health - Ecossistema Digital de Saúde Mental</title>
+    <link rel="icon" type="image/x-icon" href="imagens/Logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #264466 0%, #1a2f45 100%);
+        }
+    </style>
 </head>
+<body class="bg-gray-50">
 
-<body>
-
-    <!-- ======================================SIDEBAR====================================== -->
-
-    <div>
-    <nav class="sidebar close">
-        <header>
-            <div class="logo-details">
-                <span class="image">
-                    <img src="imagens/Logo.png" alt="logo">
-                </span>
-
-                <div class="text header-text">
-                    <span class="tittle">Help Mental Health</span>
-                </div>
+    <!-- Cabeçalho -->
+    <header class="hero-gradient text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="imagens/Logo.png" alt="Help Mental Health" class="h-12 mr-4">
+                <h1 class="text-2xl font-bold">Help Mental Health</h1>
             </div>
+            <nav>
+                <a href="#voce" class="text-white hover:text-gray-200 mx-3">Para usuarios</a>
+                <!-- <a href="#" class="text-white hover:text-gray-200 mx-3">Para empresas</a> -->
+                <a href="#profissional" class="text-white hover:text-gray-200 mx-3">Para profissionais</a>
+                <!-- <a href="#" class="bg-white text-[#264466] px-4 py-2 rounded-lg font-medium ml-3 hover:bg-gray-100">Entrar</a> -->
+            </nav>
+        </div>
+    </header>
 
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-                <ul class="menu-links">
-                    <li class="nav-links">
-                        <a href="index.html">
-                            <i class='bx bx-message-rounded-dots icon'></i>
-                            <span class="text nav-text">Respostas</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="menu-links">
-                    <li class="nav-links">
-                        <a href="doacao.html">
-                            <i class='bx bx-money icon'></i>
-                            <span class="text nav-text">Doações</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="menu-links">
-                    <li class="nav-links">
-                        <a href="about.html">
-                            <i class='bx bx-info-square icon'></i>
-                            <span class="text nav-text">Sobre nós</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- <ul class="menu-links">
-                    <li class="nav-links">
-                        <a href="#">
-                            <i class='bx bx-cog icon'></i>
-                            <span class="text nav-text">Configurações</span>
-                        </a>
-                    </li>
-                </ul> -->
-            </div>
-
-            <div>
-
-                <ul class="bottom-links">
-                    <li class="mode">
-                        <a href="#">
-                            <i class='bx bx-moon moon' id="moon" style="cursor: auto;"></i>
-                            <i class='bx bx-sun sun' id="sun" style="cursor: auto;"></i>
-                            <span class="mode-text text" style="cursor: auto;">Claro</span>
-                        </a>
-                        <input type="checkbox" id="checkboxInput">
-                        <label for="checkboxInput" class="toggleSwitch close"></label>
-                    </li>
-                </ul>
-
-                <ul class="bottom-links">
-                    <li class="nav-links">
-                        <a href="inicio.html">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="text nav-text">Sair</span>
-                        </a>
-                    </li>
-                </ul>
-
+    <!-- Seção Hero -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Help Mental Health, o ecossistema digital de saúde mental</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8">Nossos usuarios têm acesso a materiais online produzido por psicologos e chat de resposta, tudo na palma da mão.</p>
+            <div class="space-x-4">
+                <a href="loginUsuario.php" class="bg-white text-[#264466] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 inline-block">Quero entrar agora</a>
+                <a href="loginPsicologo.php" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-[#264466] inline-block">Sou profissional</a>
             </div>
         </div>
-    </nav>
-
-    <!-- ======================================FIM DA SIDEBAR====================================== -->
-
-    <!-- ======================================HOME====================================== -->
-
-    <section class="home">
-        <!-- <div class="search-box"><input type="text" class="search" placeholder="Pesquisar"><i class='bx bx-search bx-rotate-90'></i></div> -->
-        <div class="text" id="resp">Respostas</div>
-
-        <div class="container" class="hidden">
-            <div id="terminal">
-                <i class='bx bx-arrow-back icon' id="back"></i>
-                <label>Pelo que você está passando?</label>
-                <textarea name="text" class="send" placeholder="Escreva aqui"></textarea>
-                <button id="sent">Enviar</button>
-            </div>
-        </div>
-
-
-        <!-- ======================================Containers MSG====================================== -->
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-
-        <div class="chat-item">
-            <div class="chat-info">
-                <div class="avatar"></div>
-                <div class="chat-details">
-                    <p class="name">Psicólogo(a)</p>
-                    <p class="message">Mensagem do(a) psicólogo(a)</p>
-                </div>
-            </div>
-            <div class="time">11:45</div>
-        </div>
-        <!-- ======================================Fim Containers MSG====================================== -->
-
-        <!-- ======================================BTN MSG====================================== -->
-
-        <div class="btnmsg"><button id="msg"><i class='bx bx-comment-add'></i></button></div>
-
-        <!-- ======================================FIM BTN MSG====================================== -->
-
-
     </section>
 
-    <!-- ======================================FIM DO HOME====================================== -->
-        
-    <!--js-->   
-        <script src="script.js"></script>
-        <script>
-            function trocarPagina() {
-                window.location.href = "chatUsuario.html";
-            }
-        
-            // Usando querySelectorAll + forEach
-            document.querySelectorAll(".chat-item").forEach(item => {
-                item.addEventListener("click", trocarPagina);
-            });
+    <!-- Seção Para Você -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="imagens/work.jpg" alt="Saúde mental para você" id="voce" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-3xl font-bold text-[#264466] mb-6">Para você</h3>
+                    <p class="text-lg text-gray-700 mb-6">Tenha acesso a materiais online de psicólogos e terapeutas especializados e mande uma mensagem para eles quando e onde precisar.</p>
+                    <a href="cadastroUsuario.php" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block">Quero ajuda agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            let btnmsg = document.getElementById("msg");
-             let container = document.querySelector(".container");
-             let chat = document.querySelectorAll(".chat-item");
-             let divbtn = document.querySelector(".btnmsg");
-             let resp = document.getElementById("resp");
-             let search = document.querySelector(".search-box");
-             let sent = document.getElementById("sent");
-             let back = document.getElementById("back");
+    <!-- Seção Para Empresas
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-3xl font-bold text-[#264466] mb-6" id="Empresa">Para empresas</h3>
+                    <p class="text-lg text-gray-700 mb-6">Ofereça aos seus colaboradores um cuidado de saúde mental personalizado e de qualidade.</p>
+                    <a href="#" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block">Saiba mais para empresas</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="imagens/office.jpg" alt="Saúde mental nas empresas" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-             btnmsg.addEventListener("click", () => {
-            container.style.display = "flex"; 
-            chat.forEach((chat) => {
-                chat.style.display = "none";
-            });
+    <!-- Seção Para Profissionais -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="imagens/terapeuta.jpg" alt="Saúde mental para você" id="profissional" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-10 text-end">
+                    <h3 class="text-3xl font-bold text-[#264466] mb-6 mr-10">Para Profissionais</h3>
+                    <p class="text-lg text-gray-700 mb-6 mr-10">Produza materiais na plataforma, responda usuarios, compartilhe seus artigos e seja reconhecido e monetizado</p>
+                    <a href="cadastroPsicologo.php" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block mr-10">Quero começar agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            divbtn.style.display = "none";
-            resp.style.display = "none";
-            search.style.display = "none";
-            });
+    <!-- Rodapé -->
+    <footer class="bg-[#264466] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <img src="imagens/Logo.png" alt="Help Mental Health" class="h-10 mr-3">
+                        <span class="text-xl font-bold">Help Mental Health</span>
+                    </div>
+                    <p class="max-w-xs">Acreditamos que saúde mental é primordial para nos conectarmos com o que realmente importa.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold mb-4">Links úteis</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#voce" class="hover:text-gray-300">Para pacientes</a></li>
+                            <!-- <li><a href="#" class="hover:text-gray-300">Para empresas</a></li> -->
+                            <li><a href="#profissional" class="hover:text-gray-300">Para profissionais</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Contato</h4>
+                        <ul class="space-y-2">
+                            <li>helpmentalhealth@gmail.com</li>
+                            <li>(XX) XXXX-XXXX</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Redes sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/" class="hover:text-gray-300">Instagram</a>
+                            <a href="https://br.linkedin.com/" class="hover:text-gray-300">LinkedIn</a>
+                            <a href="https://www.facebook.com/" class="hover:text-gray-300">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-sm">
+                <p>© 2025 Help Mental Health.</p>
+            </div>
+        </div>
+    </footer>
 
-            back.addEventListener("click", () => {
-            container.style.display = "none"; 
-            chat.forEach((chat) => {
-                chat.style.display = "flex";
-            });
-
-            divbtn.style.display = "flex";
-            resp.style.display = "flex";
-            search.style.display = "flex";
-            });
-
-
-            sent.onclick = function(){
-                alert("Mensagem enviada com sucesso");;
-            }
-
-        </script>
 </body>
-
 </html>

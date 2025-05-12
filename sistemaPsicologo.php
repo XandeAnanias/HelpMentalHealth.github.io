@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if ((!isset($_SESSION["cpf"]) == true) and 
+    (!isset($_SESSION["senha"]) == true)) {
+        unset($_SESSION['cpf']);
+        unset($_SESSION['senha']);
+        header("Location: loginPsicologo.php");
+    }
+    $logado = $_SESSION["cpf"];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -93,7 +104,7 @@
 
                 <ul class="bottom-links">
                     <li class="nav-links">
-                        <a href="inicio.html">
+                        <a href="sair.php">
                             <i class='bx bx-log-out icon'></i>
                             <span class="text nav-text">Sair</span>
                         </a>
