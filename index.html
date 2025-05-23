@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Help Mental Health - Ecossistema Digital de Saúde Mental</title>
+    <title>Help Mental Health</title>
     <link rel="icon" type="image/x-icon" href="imagens/Logo.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
+        }
+        html {
+        scroll-behavior: smooth;
         }
         .hero-gradient {
             background: linear-gradient(135deg, #264466 0%, #1a2f45 100%);
@@ -26,9 +29,10 @@
                 <h1 class="text-2xl font-bold">Help Mental Health</h1>
             </div>
             <nav>
-                <a href="#voce" class="text-white hover:text-gray-200 mx-3">Para usuarios</a>
+                <a href="#voce" class="text-white hover:text-gray-200 mx-3">Usuarios</a>
                 <!-- <a href="#" class="text-white hover:text-gray-200 mx-3">Para empresas</a> -->
-                <a href="#profissional" class="text-white hover:text-gray-200 mx-3">Para profissionais</a>
+    
+                <a href="#profissional" class="text-white hover:text-gray-200 mx-3">Profissionais</a>
                 <!-- <a href="#" class="bg-white text-[#264466] px-4 py-2 rounded-lg font-medium ml-3 hover:bg-gray-100">Entrar</a> -->
             </nav>
         </div>
@@ -39,9 +43,9 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-6">Help Mental Health, o ecossistema digital de saúde mental</h2>
             <p class="text-xl max-w-3xl mx-auto mb-8">Nossos usuarios têm acesso a materiais online produzido por psicologos e chat de resposta, tudo na palma da mão.</p>
-            <div class="space-x-4">
-                <a href="loginUsuario.php" class="bg-white text-[#264466] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 inline-block">Quero entrar agora</a>
-                <a href="loginPsicologo.php" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-[#264466] inline-block">Sou profissional</a>
+            <div class="space-x-4 space-y-2">
+                <a href="usuario/loginUsuario.html" class="bg-white text-[#264466] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 inline-block">Entrar como usuário</a>
+                <a href="psicologo/loginPsicologo.html" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-[#264466] inline-block ml-0">Entrar como Psicólogo</a>
             </div>
         </div>
     </section>
@@ -56,27 +60,11 @@
                 <div class="md:w-1/2 md:pl-10">
                     <h3 class="text-3xl font-bold text-[#264466] mb-6">Para você</h3>
                     <p class="text-lg text-gray-700 mb-6">Tenha acesso a materiais online de psicólogos e terapeutas especializados e mande uma mensagem para eles quando e onde precisar.</p>
-                    <a href="cadastroUsuario.php" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block">Quero ajuda agora</a>
+                    <a href="usuario/cadastroUsuario.html" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block">Quero ajuda agora</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Seção Para Empresas
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h3 class="text-3xl font-bold text-[#264466] mb-6" id="Empresa">Para empresas</h3>
-                    <p class="text-lg text-gray-700 mb-6">Ofereça aos seus colaboradores um cuidado de saúde mental personalizado e de qualidade.</p>
-                    <a href="#" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block">Saiba mais para empresas</a>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="imagens/office.jpg" alt="Saúde mental nas empresas" class="rounded-lg shadow-xl">
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Seção Para Profissionais -->
     <section class="py-16 bg-gray-100">
@@ -88,7 +76,7 @@
                 <div class="md:w-1/2 md:pl-10 text-end">
                     <h3 class="text-3xl font-bold text-[#264466] mb-6 mr-10">Para Profissionais</h3>
                     <p class="text-lg text-gray-700 mb-6 mr-10">Produza materiais na plataforma, responda usuarios, compartilhe seus artigos e seja reconhecido e monetizado</p>
-                    <a href="cadastroPsicologo.php" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block mr-10">Quero começar agora</a>
+                    <a href="psicologo/cadastroPsicologo.html" class="bg-[#264466] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a2f45] inline-block mr-10">Quero começar agora</a>
                 </div>
             </div>
         </div>
@@ -124,9 +112,9 @@
                     <div>
                         <h4 class="font-bold mb-4">Redes sociais</h4>
                         <div class="flex space-x-4">
-                            <a href="https://www.instagram.com/" class="hover:text-gray-300">Instagram</a>
-                            <a href="https://br.linkedin.com/" class="hover:text-gray-300">LinkedIn</a>
-                            <a href="https://www.facebook.com/" class="hover:text-gray-300">Facebook</a>
+                            <a href="https://www.instagram.com/" target="_blank" class="hover:text-gray-300">Instagram</a>
+                            <a href="https://br.linkedin.com/" target="_blank" class="hover:text-gray-300">LinkedIn</a>
+                            <a href="https://www.facebook.com/" target="_blank" class="hover:text-gray-300">Facebook</a>
                         </div>
                     </div>
                 </div>
