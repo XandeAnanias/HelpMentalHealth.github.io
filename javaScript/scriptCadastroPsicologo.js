@@ -1,4 +1,4 @@
-const formCadastro=document.getElementById("formCadastroUsuario");
+const formCadastro=document.getElementById("formCadastroPsicologo");
 let formValidado=true;
 let senhaDiferente=document.getElementById("senhas-diferentes");
 let campoSenhaConfirmada=document.getElementById("senha-confirmada");
@@ -8,6 +8,10 @@ let nomeInvalido=document.getElementById("nome-invalido");
 let campoNome=document.getElementById("nome");
 let emailInvalido=document.getElementById("email-invalido");
 let campoEmail=document.getElementById("email");
+let cpfInvalido=document.getElementById("cpf-invalido");
+let campoCpf=document.getElementById("cpf");
+let estadoInvalido=document.getElementById("estado-invalido");
+let campoEstado=document.getElementById("estado");
 let revelaSenha=document.getElementById("revela-senha");
 let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
 
@@ -41,6 +45,25 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
 
     });
 
+    //formata o cpf em tempo real
+    campoCpf.addEventListener("input", function(){
+        let valor=campoCpf.value;
+        valor=valor.replace(/\D/g,'');
+        valor=valor.slice(0,11);
+
+        if(valor.length>3){
+         valor=valor.replace(/^(\d{3})(\d)/, '$1.$2');
+        }
+        if(valor.length>6){
+         valor=valor.replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3');
+        }
+        if(valor.length>9){
+         valor=valor.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3-$4');
+        }
+      
+        campoCpf.value=valor;
+    });
+
     //criação do form para fazer cadastro
     formCadastro.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -48,14 +71,16 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
 
       const formData = new FormData(formCadastro);
 
-      const usuario = {
+      const psicologo = {
         nome: formData.get("nome"),
+        cpf: formData.get("cpf"),
+        estado: formData.get("estado"),
         email: formData.get("email"),
         senha: formData.get("senha")
       };
 
-    //validação do nome do usuario
-    if(!validaNome(usuario.nome)){
+    //validação do nome do psicólogo
+    if(!validaNome(psicologo.nome)){
         nomeInvalido.textContent="O campo nome deve receber um valor válido"
         nomeInvalido.style.color="red";
         campoNome.style.borderColor="red";
@@ -63,11 +88,22 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
     }else{
     nomeInvalido.textContent="";
     campoNome.style.borderColor="";
-    usuario.nome=formataNome(usuario.nome);
+    psicologo.nome=formataNome(psicologo.nome);
+    }
+
+    //valida o cpf do psicólogo
+    if(!validaCpf(psicologo.cpf)){
+        cpfInvalido.textContent="O campo cpf deve receber um valor válido";
+        cpfInvalido.style.color="red";
+        campoCpf.style.borderColor="red";
+        formValidado=false;
+    }else{
+        cpfInvalido.textContent="";
+        campoCpf.style.borderColor="";
     }
    
-    //validação do email do usuario
-    if(!validaEmail(usuario.email)){
+    //validação do email do psicólogo
+    if(!validaEmail(psicologo.email)){
         emailInvalido.textContent="O campo email deve receber um valor válido"
         emailInvalido.style.color="red";
         campoEmail.style.borderColor="red";
@@ -77,8 +113,19 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
     campoEmail.style.borderColor="";
     }
 
-    //validação da senha do usuario
-    if(usuario.senha.length<8){
+    //valida o estado do psicólogo
+    if(!psicologo.estado){
+        estadoInvalido.textContent="O campo estado deve receber um valor válido";
+        estadoInvalido.style.color="red";
+        campoEstado.style.borderColor="red";
+        formValidado=false;
+    }else{
+        estadoInvalido.textContent="";
+        campoEstado.style.borderColor="";
+    }
+
+    //validação da senha do psicólogo
+    if(psicologo.senha.length<8){
         senhaInvalida.textContent="A senha deve possuir no mínimo 8 caracteres"
         senhaInvalida.style.color="red";
         campoSenha.style.borderColor="red";
@@ -88,8 +135,8 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
     campoSenha.style.borderColor="";
     }
 
-    //comparação das senhas do usuario
-    if(usuario.senha!==formData.get("senha-confirmada")?.trim()){
+    //comparação das senhas do psicólogo
+    if(psicologo.senha!==formData.get("senha-confirmada")?.trim()){
         senhaDiferente.textContent="Digite duas senhas iguais para confirmação"
         senhaDiferente.style.color="red";
         campoSenhaConfirmada.style.borderColor="red";
@@ -99,15 +146,15 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
      campoSenhaConfirmada.style.borderColor="";
      }
 
-    console.log("Enviando:", JSON.stringify(usuario));
+    console.log("Enviando:", JSON.stringify(psicologo));
 
     //fetch para conectar com a api 
     if(formValidado===true){
       try {
-        const response = await fetch("http://localhost:8080/api-hmh/usuario/registra-usuario", {
+        const response = await fetch("http://localhost:8080/api-hmh/psicologo/registra-psicologo", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(usuario)
+          body: JSON.stringify(psicologo)
         });
 
         const data = await response.json();
@@ -116,7 +163,7 @@ let revelaSenhaConfirmada=document.getElementById("revela-senha-confirmada");
         if (!response.ok) {
           alert("Erro no cadastro: tente novamente mais tarde");
           return;
-        }else window.location.href="loginUsuario.html"
+        }else window.location.href="loginPsicologo.html"
 
     } catch(erro){
      console.error("Erro ao tentar cadastrar: ", erro);
@@ -136,6 +183,33 @@ function validaEmail(email){
 function validaNome(nome){
     const padrao=/^[A-Za-zÀ-ÿ\s]{2,}$/;
     return padrao.test(nome);
+}
+
+//função para validar o cpf do psicólogo
+function validaCpf(cpf){
+    
+    cpf = cpf.replace(/\D/g, ''); 
+
+    if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+
+    let soma = 0;
+    for (let i = 0; i < 9; i++) {
+        soma += parseInt(cpf.charAt(i)) * (10 - i);
+    }
+
+    let digito1 = 11 - (soma % 11);
+    if (digito1 >= 10) digito1 = 0;
+    if (digito1 !== parseInt(cpf.charAt(9))) return false;
+
+    soma = 0;
+    for (let i = 0; i < 10; i++) {
+        soma += parseInt(cpf.charAt(i)) * (11 - i);
+    }
+
+    let digito2 = 11 - (soma % 11);
+    if (digito2 >= 10) digito2 = 0;
+    return digito2 === parseInt(cpf.charAt(10));
+
 }
 
 //função que formata o nome do usuário
